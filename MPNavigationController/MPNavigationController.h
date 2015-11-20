@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+// This is a fork of BFNavigationController: https://github.com/bfolder/BFNavigationController.
+
 //! Project version number for MPNavigationController.
 FOUNDATION_EXPORT double MPNavigationControllerVersionNumber;
 

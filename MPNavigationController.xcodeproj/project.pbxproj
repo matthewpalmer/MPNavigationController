@@ -8,12 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		0E4C86121BFFB536000E9EF1 /* MPNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4C86111BFFB536000E9EF1 /* MPNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E4C86201BFFB568000E9EF1 /* BFNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4C86191BFFB568000E9EF1 /* BFNavigationController.h */; };
+		0E4C86211BFFB568000E9EF1 /* BFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C861A1BFFB568000E9EF1 /* BFNavigationController.m */; };
+		0E4C86221BFFB568000E9EF1 /* BFViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4C861B1BFFB568000E9EF1 /* BFViewController.h */; };
+		0E4C86231BFFB568000E9EF1 /* NSView+BFUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4C861C1BFFB568000E9EF1 /* NSView+BFUtilities.h */; };
+		0E4C86241BFFB568000E9EF1 /* NSView+BFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C861D1BFFB568000E9EF1 /* NSView+BFUtilities.m */; };
+		0E4C86251BFFB568000E9EF1 /* NSViewController+BFNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4C861E1BFFB568000E9EF1 /* NSViewController+BFNavigationController.h */; };
+		0E4C86261BFFB568000E9EF1 /* NSViewController+BFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C861F1BFFB568000E9EF1 /* NSViewController+BFNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E4C860E1BFFB536000E9EF1 /* MPNavigationController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MPNavigationController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4C86111BFFB536000E9EF1 /* MPNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPNavigationController.h; sourceTree = "<group>"; };
 		0E4C86131BFFB536000E9EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E4C86191BFFB568000E9EF1 /* BFNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFNavigationController.h; sourceTree = "<group>"; };
+		0E4C861A1BFFB568000E9EF1 /* BFNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFNavigationController.m; sourceTree = "<group>"; };
+		0E4C861B1BFFB568000E9EF1 /* BFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFViewController.h; sourceTree = "<group>"; };
+		0E4C861C1BFFB568000E9EF1 /* NSView+BFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+BFUtilities.h"; sourceTree = "<group>"; };
+		0E4C861D1BFFB568000E9EF1 /* NSView+BFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+BFUtilities.m"; sourceTree = "<group>"; };
+		0E4C861E1BFFB568000E9EF1 /* NSViewController+BFNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSViewController+BFNavigationController.h"; sourceTree = "<group>"; };
+		0E4C861F1BFFB568000E9EF1 /* NSViewController+BFNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSViewController+BFNavigationController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +61,13 @@
 			isa = PBXGroup;
 			children = (
 				0E4C86111BFFB536000E9EF1 /* MPNavigationController.h */,
+				0E4C86191BFFB568000E9EF1 /* BFNavigationController.h */,
+				0E4C861A1BFFB568000E9EF1 /* BFNavigationController.m */,
+				0E4C861B1BFFB568000E9EF1 /* BFViewController.h */,
+				0E4C861C1BFFB568000E9EF1 /* NSView+BFUtilities.h */,
+				0E4C861D1BFFB568000E9EF1 /* NSView+BFUtilities.m */,
+				0E4C861E1BFFB568000E9EF1 /* NSViewController+BFNavigationController.h */,
+				0E4C861F1BFFB568000E9EF1 /* NSViewController+BFNavigationController.m */,
 				0E4C86131BFFB536000E9EF1 /* Info.plist */,
 			);
 			path = MPNavigationController;
@@ -59,7 +80,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E4C86201BFFB568000E9EF1 /* BFNavigationController.h in Headers */,
+				0E4C86251BFFB568000E9EF1 /* NSViewController+BFNavigationController.h in Headers */,
+				0E4C86231BFFB568000E9EF1 /* NSView+BFUtilities.h in Headers */,
 				0E4C86121BFFB536000E9EF1 /* MPNavigationController.h in Headers */,
+				0E4C86221BFFB568000E9EF1 /* BFViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E4C86241BFFB568000E9EF1 /* NSView+BFUtilities.m in Sources */,
+				0E4C86211BFFB568000E9EF1 /* BFNavigationController.m in Sources */,
+				0E4C86261BFFB568000E9EF1 /* NSViewController+BFNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
