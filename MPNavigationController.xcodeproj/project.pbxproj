@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0E4C86121BFFB536000E9EF1 /* MPNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4C86111BFFB536000E9EF1 /* MPNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E4C86201BFFB568000E9EF1 /* BFNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4C86191BFFB568000E9EF1 /* BFNavigationController.h */; };
+		0E4C86201BFFB568000E9EF1 /* BFNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4C86191BFFB568000E9EF1 /* BFNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E4C86211BFFB568000E9EF1 /* BFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C861A1BFFB568000E9EF1 /* BFNavigationController.m */; };
-		0E4C86221BFFB568000E9EF1 /* BFViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4C861B1BFFB568000E9EF1 /* BFViewController.h */; };
-		0E4C86231BFFB568000E9EF1 /* NSView+BFUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4C861C1BFFB568000E9EF1 /* NSView+BFUtilities.h */; };
+		0E4C86221BFFB568000E9EF1 /* BFViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4C861B1BFFB568000E9EF1 /* BFViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E4C86231BFFB568000E9EF1 /* NSView+BFUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4C861C1BFFB568000E9EF1 /* NSView+BFUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E4C86241BFFB568000E9EF1 /* NSView+BFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C861D1BFFB568000E9EF1 /* NSView+BFUtilities.m */; };
-		0E4C86251BFFB568000E9EF1 /* NSViewController+BFNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4C861E1BFFB568000E9EF1 /* NSViewController+BFNavigationController.h */; };
+		0E4C86251BFFB568000E9EF1 /* NSViewController+BFNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4C861E1BFFB568000E9EF1 /* NSViewController+BFNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E4C86261BFFB568000E9EF1 /* NSViewController+BFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4C861F1BFFB568000E9EF1 /* NSViewController+BFNavigationController.m */; };
 /* End PBXBuildFile section */
 
