@@ -20,5 +20,5 @@ FOUNDATION_EXPORT const unsigned char MPNavigationControllerVersionString[];
 
 #import <MPNavigationController/BFNavigationController.h>
 #import <MPNavigationController/BFViewController.h>
-#import <MPNavigationController/NSViewController+BFNavigationController>
+#import <MPNavigationController/NSViewController+BFNavigationController.h>
 #import <MPNavigationController/NSView+BFUtilities.h>
