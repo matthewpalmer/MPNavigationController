@@ -38,6 +38,11 @@ static const CGFloat kPushPopAnimationDuration = 0.2;
     return [self initWithFrame:NSZeroRect rootViewController:nil];
 }
 
+- (id)initWithFrame:(NSRect)frame rootViewController:(NSViewController *)controller withDelegate: (id<BFNavigationControllerDelegate>)delegate {
+    self.delegate = delegate;
+    return [self initWithFrame:frame rootViewController:controller];
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 - (id)initWithFrame:(NSRect)aFrame rootViewController:(NSViewController *)viewController {
@@ -66,6 +71,7 @@ static const CGFloat kPushPopAnimationDuration = 0.2;
 
         viewController.view.autoresizingMask = self.view.autoresizingMask;
         viewController.view.frame = self.view.bounds;
+        [self _notifyDelegateForWillShowViewController:viewController animated:false];
         [self.view addSubview:viewController.view];
         
         // Initial controller will appear on startup
@@ -73,6 +79,7 @@ static const CGFloat kPushPopAnimationDuration = 0.2;
             [(id<BFViewController>)viewController viewWillAppear:NO];
         }
 
+        [self _notifyDelegateForDidShowViewController:viewController animated:false];
     }
     
     return self;
@@ -136,6 +143,23 @@ static const CGFloat kPushPopAnimationDuration = 0.2;
     [self _navigateFromViewController:visibleController toViewController:newTopmostController animated:animated push:push];
 }
 
+- (void)_notifyDelegateForWillShowViewController:(NSViewController *)viewController
+                                        animated: (BOOL)animated
+{
+    if (_delegate && [_delegate respondsToSelector:@selector(navigationController:willShowViewController:animated:)]) {
+        [_delegate navigationController:self willShowViewController:viewController animated:animated];
+    }
+}
+
+- (void)_notifyDelegateForDidShowViewController:(NSViewController *)viewController
+                                       animated:(BOOL)animated
+{
+    // Call delegate
+    if (_delegate && [_delegate respondsToSelector:@selector(navigationController:didShowViewController:animated:)]) {
+        [_delegate navigationController:self didShowViewController:viewController animated:animated];
+    }
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 - (void)_navigateFromViewController:(NSViewController *)lastController
@@ -149,9 +173,7 @@ static const CGFloat kPushPopAnimationDuration = 0.2;
     newController.view.autoresizingMask = self.view.autoresizingMask;
     
     // Call delegate
-    if (_delegate && [_delegate respondsToSelector:@selector(navigationController:willShowViewController:animated:)]) {
-        [_delegate navigationController:self willShowViewController:newController animated:animated];
-    }
+    [self _notifyDelegateForWillShowViewController:newController animated:animated];
     
     // New controller will appear
     if ([newController respondsToSelector:@selector(viewWillAppear:)]) {
@@ -166,9 +188,7 @@ static const CGFloat kPushPopAnimationDuration = 0.2;
     // Completion inline Block
     void(^navigationCompleted)(BOOL) = ^(BOOL animated) {
         // Call delegate
-        if (_delegate && [_delegate respondsToSelector:@selector(navigationController:didShowViewController:animated:)]) {
-            [_delegate navigationController:self didShowViewController:newController animated:animated];
-        }
+        [self _notifyDelegateForDidShowViewController:newController animated:animated];
         
         // New controller did appear
         if ([newController respondsToSelector: @selector(viewDidAppear:)]) {
