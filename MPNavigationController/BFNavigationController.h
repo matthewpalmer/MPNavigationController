@@ -47,6 +47,8 @@
  */
 - (id)initWithFrame:(NSRect)frame rootViewController:(NSViewController *)controller;
 
+- (id)initWithFrame:(NSRect)frame rootViewController:(NSViewController *)controller withDelegate: (id<BFNavigationControllerDelegate>)delegate;
+
 ///---------------------------------------------------------------------------------------
 /// @name Accessing Items on the Navigation Stack
 ///---------------------------------------------------------------------------------------
